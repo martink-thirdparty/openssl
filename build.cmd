@@ -7,9 +7,6 @@ cd intermediate\openssl
 perl %~dp0\vanilla\configure VC-WIN32 --prefix="%MkBuildPath%\output\Release Lib\x86\openssl" --openssldir="%MkBuildPath%\output\Release Lib\x86\openssl\ssl" no-shared
 
 nmake
-rem nmake install
-
-move %MkBuildPath%\intermediate\openssl\libcrypto.lib "%MkBuildPath%\output\Release Lib\x86"
-move %MkBuildPath%\intermediate\openssl\libssl.lib "%MkBuildPath%\output\Release Lib\x86"
+nmake install
 
 cd /d %~dp0
